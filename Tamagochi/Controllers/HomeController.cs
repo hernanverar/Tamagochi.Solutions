@@ -1,15 +1,17 @@
 using Microsoft.AspNetCore.Mvc;
+using Tamagochi.Models;
+using System.Collections.Generic;
 
-namespace [ProjectNameWithoutBracks].Controllers
+
+namespace Tamagochi.Controllers
 {
     public class HomeController : Controller
-{
-
-    [HttpGet("/")]
-    public ActionResult Index()
     {
-        return View();
-    }
 
-}
+        [HttpGet("/")]
+        public ActionResult Index()
+        {
+            return View();
+        }
+    }
 }

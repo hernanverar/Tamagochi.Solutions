@@ -6,16 +6,15 @@ using System;
 namespace Tamagochi.Tests
 {
   [TestClass]
-  public class TamaPetTests
+  public class PetTests
   {
 
     [TestMethod]
-    public void TamaPetConstructor_CreateInstanceOfTypeTamaPet_TamaPet()
+    public void PetConstructor_CreateInstanceOfTypePet_Pet()
     {
       Fox Inda = new Fox("Inda");
       bool expected = true;
       Assert.AreEqual(expected, (Inda is GochiPet));
-
     }
   }
 }

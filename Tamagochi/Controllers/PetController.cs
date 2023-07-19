@@ -19,9 +19,20 @@ namespace Tamagochi.Controllers
     public ActionResult Show(int petId, string action)
     {
       GochiPet foundPet = GochiPet.Find(petId);
+      if (action == "play")
       {
-        return View(foundPet);
+        foundGochiPet.Play()
       }
+      {
+        return View(foundGochiPet);
+      }
+    }
+    
+    [HttpPost("/pets/delete")]
+    public ActionResult DeleteAll()
+    {
+      GochiPet.ClearAll();
+      return View();
     }
   }
 }
